@@ -32,6 +32,9 @@ func getSearchResult() func(ctx *gin.Context) {
 
 // Helper function to convert the string param to int
 func convertParamToInt(p string) (int, error) {
+	if p == "" {
+		return 0, nil
+	}
 	i, err := strconv.Atoi(p)
 	if err != nil {
 		return 0, err
