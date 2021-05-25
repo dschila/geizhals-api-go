@@ -9,12 +9,14 @@ import (
 	"github.com/proph/geizhals-api-go/services"
 )
 
+// Sets the endpoints below the Router-DefaultGroup
 func InitSearchController(router *gin.RouterGroup) {
 	r := router.Group("/search")
 	r.GET("/:query", getSearchResult())
 	r.GET("/category/:category/:query", getSearchResult())
 }
 
+// Return the search result.
 func getSearchResult() func(ctx *gin.Context) {
 	return func(ctx *gin.Context) {
 		query := ctx.Param("query")
@@ -28,6 +30,7 @@ func getSearchResult() func(ctx *gin.Context) {
 	}
 }
 
+// Helper function to convert the string param to int
 func convertParamToInt(p string) (int, error) {
 	i, err := strconv.Atoi(p)
 	if err != nil {
