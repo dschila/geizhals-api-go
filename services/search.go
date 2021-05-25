@@ -14,10 +14,11 @@ func Search(query string, category int) []models.SearchArticle {
 	s := colly.NewCollector()
 	s.OnHTML(".listview__item > .listview__content", func(h *colly.HTMLElement) {
 		article := models.SearchArticle{
-			Name:        h.ChildText(".listview__name-wrapper > h3"),
-			URL:         h.ChildAttr(".listview__name-wrapper > h3 > a", "href"),
-			LowestPrice: h.ChildText(".listview__price-link"),
-			ImageURL:    h.ChildAttr(".listview__image-link > img", "src"),
+			Name:         h.ChildText(".listview__name-wrapper > h3"),
+			URL:          h.ChildAttr(".listview__name-wrapper > h3 > a", "href"),
+			LowestPrice:  h.ChildText(".listview__price-link"),
+			ImageURL:     h.ChildAttr(".listview__image-link > img", "src"),
+			Availability: h.ChildAttr(".listview__content-right > span", "aria-label"),
 		}
 
 		offerCountArray := regexp.MustCompile("[0-9]+").FindAllString(h.ChildText(".listview__offercount"), -1)
