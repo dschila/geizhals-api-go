@@ -20,6 +20,7 @@ func main() {
 
 	defaultGroup := server.Group("/api")
 	controllers.InitSearchController(defaultGroup)
+	controllers.InitArticleController(defaultGroup)
 
 	server.Run(":" + helpers.GetEnv("PORT", "8080"))
 }
