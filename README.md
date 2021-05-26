@@ -2,12 +2,10 @@
 Using geizhals.de via a RESTFul interface to search and display products. 
 
 ## Motivation
-----------
 
 As part of a private project to learn the programming language Go, I needed the possibility to collect availability of articles from Geizhals.de without calling the website directly. 
 
 ## Run
-----------
 
     # go run main.go
 or
@@ -16,7 +14,6 @@ or
     # ./geizhals-api-go   
 
 ## Docker
-----------
 
     # docker build -t geizhals-api-go:1.0 .
     # docker run -d --name geizhals-api-go -p 8080:8080 geizhals-api-go:1.0
@@ -49,8 +46,7 @@ or
         },
     ...
     ]
-----------
-
+    
 ## Search article in a specific category
 
 ### Request
@@ -93,7 +89,6 @@ Office & School | 14
         },
     ...
     ]
-----------
 ## Get article details
 
 ### Request
