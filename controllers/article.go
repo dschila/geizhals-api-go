@@ -8,13 +8,13 @@ import (
 	"github.com/proph/geizhals-api-go/services"
 )
 
-// Sets the endpoints below the Router-DefaultGroup
+// Init 'article' endpoints
 func InitArticleController(router *gin.RouterGroup) {
 	r := router.Group("/article")
 	r.GET("/:identifier", getArticleDetails())
 }
 
-// Return the article details including the all providers.
+// Returns the item details as JSON
 func getArticleDetails() func(ctx *gin.Context) {
 	return func(ctx *gin.Context) {
 		identifier := ctx.Param("identifier")

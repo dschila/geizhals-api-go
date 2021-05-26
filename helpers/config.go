@@ -2,11 +2,12 @@ package helpers
 
 import "os"
 
-// Environment variable value or default if not exists
-func GetEnv(key string, valueDefault string) string {
+// To get the value from the environment with specific key.
+// If no value is found with the provided key then the default value is returned.
+func GetEnv(key string, defaultValue string) string {
 	value, ok := os.LookupEnv(key)
 	if ok {
 		return value
 	}
-	return valueDefault
+	return defaultValue
 }

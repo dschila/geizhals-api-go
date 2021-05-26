@@ -9,8 +9,7 @@ import (
 	"github.com/proph/geizhals-api-go/models"
 )
 
-// Search for the provided query string based on the category
-// If category is null or not valid he search over all categories
+// Searches for articles based on the query string and the category ID
 func Search(query string, category int) []models.SearchArticle {
 	articles := []models.SearchArticle{}
 	s := colly.NewCollector()

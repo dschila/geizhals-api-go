@@ -7,7 +7,7 @@ import (
 	"github.com/proph/geizhals-api-go/models"
 )
 
-// Visit the page and extract article informations and all availabel provider
+// Collects all information about the article
 func ArticleDetails(identifier string) (models.Article, []models.Provider) {
 	article := models.Article{}
 	providers := []models.Provider{}

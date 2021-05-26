@@ -15,7 +15,7 @@ func InitSearchController(router *gin.RouterGroup) {
 	r.GET("/:query", getSearchResult())
 }
 
-// Return the search result
+// Returns the search result as JSON
 func getSearchResult() func(ctx *gin.Context) {
 	return func(ctx *gin.Context) {
 		query := ctx.Param("query")
