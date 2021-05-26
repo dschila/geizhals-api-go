@@ -6,6 +6,7 @@ import (
 	"strconv"
 
 	"github.com/gocolly/colly/v2"
+	"github.com/proph/geizhals-api-go/helpers"
 	"github.com/proph/geizhals-api-go/models"
 )
 
@@ -19,7 +20,7 @@ func Search(query string, category int) []models.SearchArticle {
 			article := models.SearchArticle{
 				Name:         h.ChildText(".listview__name-wrapper > h3"),
 				URL:          h.ChildAttr(".listview__name-wrapper > h3 > a", "href"),
-				LowestPrice:  h.ChildText(".listview__price-link"),
+				LowestPrice:  helpers.ConvertStringToFloat(h.ChildText(".listview__price-link")),
 				ImageURL:     h.ChildAttr(".listview__image-link > img", "src"),
 				Availability: h.ChildAttr(".listview__content-right > span", "aria-label"),
 			}
