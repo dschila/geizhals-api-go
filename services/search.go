@@ -15,25 +15,28 @@ func Search(query string, category int) []models.SearchArticle {
 	articles := []models.SearchArticle{}
 	s := colly.NewCollector()
 	s.OnHTML(".listview__item > .listview__content", func(h *colly.HTMLElement) {
-		article := models.SearchArticle{
-			Name:         h.ChildText(".listview__name-wrapper > h3"),
-			URL:          h.ChildAttr(".listview__name-wrapper > h3 > a", "href"),
-			LowestPrice:  h.ChildText(".listview__price-link"),
-			ImageURL:     h.ChildAttr(".listview__image-link > img", "src"),
-			Availability: h.ChildAttr(".listview__content-right > span", "aria-label"),
-		}
-
-		offerCountArray := regexp.MustCompile("[0-9]+").FindAllString(h.ChildText(".listview__offercount"), -1)
-		if len(offerCountArray) > 0 {
-			offer, err := strconv.Atoi(offerCountArray[0])
-			if err != nil {
-				offer = 0
+		isVariant := h.ChildText(".listview__label.listview__label--variant")
+		if isVariant == "" {
+			article := models.SearchArticle{
+				Name:         h.ChildText(".listview__name-wrapper > h3"),
+				URL:          h.ChildAttr(".listview__name-wrapper > h3 > a", "href"),
+				LowestPrice:  h.ChildText(".listview__price-link"),
+				ImageURL:     h.ChildAttr(".listview__image-link > img", "src"),
+				Availability: h.ChildAttr(".listview__content-right > span", "aria-label"),
 			}
-			article.OfferCount = offer
-		} else {
-			article.OfferCount = 0
+
+			offerCountArray := regexp.MustCompile("[0-9]+").FindAllString(h.ChildText(".listview__offercount"), -1)
+			if len(offerCountArray) > 0 {
+				offer, err := strconv.Atoi(offerCountArray[0])
+				if err != nil {
+					offer = 0
+				}
+				article.OfferCount = offer
+			} else {
+				article.OfferCount = 0
+			}
+			articles = append(articles, article)
 		}
-		articles = append(articles, article)
 	})
 
 	s.OnRequest(func(r *colly.Request) {
