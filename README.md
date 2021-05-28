@@ -42,11 +42,17 @@ or
             "OfferCount": 70,
             "URL": "amd-ryzen-5-3600-100-100000031box-a2064574.html",
             "ImageURL": "https://gzhls.at/i/45/74/2064574-r0.jpg",
-            "Availability": "lagernd beim Händler"
+            "Availability": 1
         },
     ...
     ]
-    
+
+Availability | ID
+--- | ---
+ANY / UNKOWN | 0
+AVAILABLE | 1
+SHORTLY | 2
+
 ## Search article in a specific category
 
 ### Request
@@ -85,7 +91,7 @@ Office & School | 14
             "OfferCount": 24,
             "URL": "lg-oled-65cx9la-a2250846.html",
             "ImageURL": "https://gzhls.at/i/08/46/2250846-r0.jpg",
-            "Availability": "lagernd beim Händler"
+            "Availability": 1
         },
     ...
     ]

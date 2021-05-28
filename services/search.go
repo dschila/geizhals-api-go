@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"regexp"
 	"strconv"
+	"strings"
 
 	"github.com/gocolly/colly/v2"
 	"github.com/proph/geizhals-api-go/helpers"
@@ -18,11 +19,10 @@ func Search(query string, category int) []models.SearchArticle {
 		isVariant := h.ChildText(".listview__label.listview__label--variant")
 		if isVariant == "" {
 			article := models.SearchArticle{
-				Name:         h.ChildText(".listview__name-wrapper > h3"),
-				URL:          h.ChildAttr(".listview__name-wrapper > h3 > a", "href"),
-				LowestPrice:  helpers.ConvertStringToFloat(h.ChildText(".listview__price-link")),
-				ImageURL:     h.ChildAttr(".listview__image-link > img", "src"),
-				Availability: h.ChildAttr(".listview__content-right > span", "aria-label"),
+				Name:        h.ChildText(".listview__name-wrapper > h3"),
+				URL:         h.ChildAttr(".listview__name-wrapper > h3 > a", "href"),
+				LowestPrice: helpers.ConvertStringToFloat(h.ChildText(".listview__price-link")),
+				ImageURL:    h.ChildAttr(".listview__image-link > img", "src"),
 			}
 
 			offerCountArray := regexp.MustCompile("[0-9]+").FindAllString(h.ChildText(".listview__offercount"), -1)
@@ -35,6 +35,13 @@ func Search(query string, category int) []models.SearchArticle {
 			} else {
 				article.OfferCount = 0
 			}
+
+			aclasses := h.ChildAttr(".listview__content-right > span", "class")
+			aclassarr := strings.Split(aclasses, " ")
+			for i := 0; i < len(aclassarr); i++ {
+				article.Availability = models.AvailabilityFromString[aclassarr[i]]
+			}
+
 			articles = append(articles, article)
 		}
 	})

@@ -6,5 +6,20 @@ type SearchArticle struct {
 	OfferCount   int
 	URL          string
 	ImageURL     string
-	Availability string
+	Availability Availability
+}
+
+type Availability int
+
+const (
+	ANY Availability = iota
+	AVAILABLE
+	SHORTLY
+	UNKOWN
+)
+
+var AvailabilityFromString = map[string]Availability{
+	"available": AVAILABLE,
+	"shortly":   SHORTLY,
+	"any":       ANY,
 }
