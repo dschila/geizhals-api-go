@@ -129,5 +129,44 @@ Office & School | 14
         ]
     }
 
+## Get custom filter list
+
+To create a custom filter visit www.geizhals.de and browse any category (example: https://geizhals.de/?cat=gra16_512&xf=9816_03+05+16+-+RTX+3080). Select your criteria and copy the url after the "?". 
+
+### Request
+
+`GET /api/custom-filter/:queryUrl`
+
+    curl -i -H 'Accept: application/json' http://localhost:8080/api/custom-filter/cat=gra16_512&xf=9816_03+05+16+-+RTX+3080~9816_03+05+16+-+RTX+3080+Ti&sort=p#productlist
+
+### Response
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json; charset=utf-8
+    Date: Wed, 14 Jun 2021 07:50:06 GMT
+    Transfer-Encoding: chunked
+
+    {
+        [
+            {
+                "Name": "GIGABYTE GeForce RTX 3080 Turbo 10G, 10GB GDDR6X, 2x HDMI, 2x DP (GV-N3080TURBO-10GD)",
+                "LowestPrice": 1199.99,
+                "OfferCount": 3,
+                "URL": "gigabyte-geforce-rtx-3080-turbo-10g-gv-n3080turbo-10gd-a2497121.html?hloc=at&hloc=de",
+                "ImageURL": "https://gzhls.at/i/71/21/2497121-s0.jpg",
+                "Availability": 0
+            },
+            {
+                "Name": "GIGABYTE GeForce RTX 3080 Gaming OC 10G (Rev. 1.0), 10GB GDDR6X, 2x HDMI, 3x DP (GV-N3080GAMING OC-10GD)",
+                "LowestPrice": 1209.99,
+                "OfferCount": 12,
+                "URL": "gigabyte-geforce-rtx-3080-gaming-oc-10g-gv-n3080gaming-oc-10gd-a2366735.html?hloc=at&hloc=de",
+                "ImageURL": "https://gzhls.at/i/67/35/2366735-s0.jpg",
+                "Availability": 1
+            },
+            ...
+        ]
+    }
+
 # Contribute
 Maybe someone will find the project helpful or can give me hints/improvements. 
