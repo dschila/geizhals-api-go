@@ -37,12 +37,12 @@ or
 
     [
         {
-            "Name": "AMD Ryzen 5 3600, 6C/12T, 3.60-4.20GHz, boxed",
-            "LowestPrice": 187,
-            "OfferCount": 70,
-            "URL": "amd-ryzen-5-3600-100-100000031box-a2064574.html",
-            "ImageURL": "https://gzhls.at/i/45/74/2064574-r0.jpg",
-            "Availability": 1
+            "name": "AMD Ryzen 5 3600, 6C/12T, 3.60-4.20GHz, boxed",
+            "lowestPrice": 187,
+            "offerCount": 70,
+            "url": "amd-ryzen-5-3600-100-100000031box-a2064574.html",
+            "imageUrl": "https://gzhls.at/i/45/74/2064574-r0.jpg",
+            "availability": 1
         },
     ...
     ]
@@ -86,12 +86,12 @@ Office & School | 14
 
     [
         {
-            "Name": "LG OLED 65CX9LA",
-            "LowestPrice": 1675,
-            "OfferCount": 24,
-            "URL": "lg-oled-65cx9la-a2250846.html",
-            "ImageURL": "https://gzhls.at/i/08/46/2250846-r0.jpg",
-            "Availability": 1
+            "name": "LG OLED 65CX9LA",
+            "lowestPrice": 1675,
+            "offerCount": 24,
+            "url": "lg-oled-65cx9la-a2250846.html",
+            "imageUrl": "https://gzhls.at/i/08/46/2250846-r0.jpg",
+            "availability": 1
         },
     ...
     ]
@@ -112,18 +112,18 @@ Office & School | 14
 
     {
         "article": {
-            "Name": "AMD Ryzen 5 3600, 6C/12T, 3.60-4.20GHz, boxed (100-100000031BOX)",
-            "PriceFrom": 187",
-            "PriceTo": 388.6,
-            "ImageURL": "https://gzhls.at/i/45/74/2064574-m0.jpg"
+            "name": "AMD Ryzen 5 3600, 6C/12T, 3.60-4.20GHz, boxed (100-100000031BOX)",
+            "priceFrom": 187",
+            "priceTo": 388.6,
+            "imageUrl": "https://gzhls.at/i/45/74/2064574-m0.jpg"
         },
         "provider": [
             {
-                "Name": "Mindfactory",
-                "OfferURL": "https://geizhals.de//redir.cgi?h=mindfactory\u0026loc=https%3A%2F%2Fwww.mindfactory.de%2Fproduct_info.php%2Finfo%2Fp1313643%2Fpid%2Fgeizhals\u0026ghaID=2064574\u0026key=7167ae0337fc34de7a73d669596f3ab8",
-                "Price": 187,
-                "Availability": "Zentrallager: 5 Stück lagernd, Lieferung 1-3 WerktageFiliale Wilhelmshaven: 5 Stück lagerndStand: 26.05.2021, 09:55",
-                "Shipping": "Vorkasse, PayPal, Giropay, Finanzierung € 8,99.Expressversand möglich.Lieferung nur innerhalb Deutschlands."
+                "name": "Mindfactory",
+                "offerURL": "https://geizhals.de//redir.cgi?h=mindfactory\u0026loc=https%3A%2F%2Fwww.mindfactory.de%2Fproduct_info.php%2Finfo%2Fp1313643%2Fpid%2Fgeizhals\u0026ghaID=2064574\u0026key=7167ae0337fc34de7a73d669596f3ab8",
+                "price": 187,
+                "availability": "Zentrallager: 5 Stück lagernd, Lieferung 1-3 WerktageFiliale Wilhelmshaven: 5 Stück lagerndStand: 26.05.2021, 09:55",
+                "shipping": "Vorkasse, PayPal, Giropay, Finanzierung € 8,99.Expressversand möglich.Lieferung nur innerhalb Deutschlands."
             },
         ...
         ]
@@ -149,20 +149,20 @@ To create a custom filter visit www.geizhals.de and browse any category (example
     {
         [
             {
-                "Name": "GIGABYTE GeForce RTX 3080 Turbo 10G, 10GB GDDR6X, 2x HDMI, 2x DP (GV-N3080TURBO-10GD)",
-                "LowestPrice": 1199.99,
-                "OfferCount": 3,
-                "URL": "gigabyte-geforce-rtx-3080-turbo-10g-gv-n3080turbo-10gd-a2497121.html?hloc=at&hloc=de",
-                "ImageURL": "https://gzhls.at/i/71/21/2497121-s0.jpg",
-                "Availability": 0
+                "name": "GIGABYTE GeForce RTX 3080 Turbo 10G, 10GB GDDR6X, 2x HDMI, 2x DP (GV-N3080TURBO-10GD)",
+                "lowestPrice": 1199.99,
+                "offerCount": 3,
+                "url": "gigabyte-geforce-rtx-3080-turbo-10g-gv-n3080turbo-10gd-a2497121.html?hloc=at&hloc=de",
+                "imageUrl": "https://gzhls.at/i/71/21/2497121-s0.jpg",
+                "availability": 0
             },
             {
-                "Name": "GIGABYTE GeForce RTX 3080 Gaming OC 10G (Rev. 1.0), 10GB GDDR6X, 2x HDMI, 3x DP (GV-N3080GAMING OC-10GD)",
-                "LowestPrice": 1209.99,
-                "OfferCount": 12,
-                "URL": "gigabyte-geforce-rtx-3080-gaming-oc-10g-gv-n3080gaming-oc-10gd-a2366735.html?hloc=at&hloc=de",
-                "ImageURL": "https://gzhls.at/i/67/35/2366735-s0.jpg",
-                "Availability": 1
+                "name": "GIGABYTE GeForce RTX 3080 Gaming OC 10G (Rev. 1.0), 10GB GDDR6X, 2x HDMI, 3x DP (GV-N3080GAMING OC-10GD)",
+                "lowestPrice": 1209.99,
+                "offerCount": 12,
+                "url": "gigabyte-geforce-rtx-3080-gaming-oc-10g-gv-n3080gaming-oc-10gd-a2366735.html?hloc=at&hloc=de",
+                "imageUrl": "https://gzhls.at/i/67/35/2366735-s0.jpg",
+                "availability": 1
             },
             ...
         ]

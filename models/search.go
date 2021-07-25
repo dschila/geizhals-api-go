@@ -1,12 +1,12 @@
 package models
 
 type SearchArticle struct {
-	Name         string
-	LowestPrice  float64
-	OfferCount   int
-	URL          string
-	ImageURL     string
-	Availability Availability
+	Name         string       `json:"name"`
+	LowestPrice  float64      `json:"lowestPrice"`
+	OfferCount   int          `json:"offerCount"`
+	URL          string       `json:"url"`
+	ImageURL     string       `json:"imageUrl"`
+	Availability Availability `json:"availability"`
 }
 
 type Availability int
