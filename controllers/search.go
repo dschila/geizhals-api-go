@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/dschila/geizhals-api-go/helpers"
+	"github.com/dschila/geizhals-api-go/services"
 	"github.com/gin-gonic/gin"
-	"github.com/proph/geizhals-api-go/helpers"
-	"github.com/proph/geizhals-api-go/services"
 )
 
 // Init 'search' endpoints

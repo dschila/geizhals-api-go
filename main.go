@@ -3,10 +3,10 @@ package main
 import (
 	"log"
 
+	"github.com/dschila/geizhals-api-go/controllers"
+	"github.com/dschila/geizhals-api-go/helpers"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
-	"github.com/proph/geizhals-api-go/controllers"
-	"github.com/proph/geizhals-api-go/helpers"
 )
 
 func main() {

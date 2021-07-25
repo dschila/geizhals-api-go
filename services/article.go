@@ -3,9 +3,9 @@ package services
 import (
 	"fmt"
 
+	"github.com/dschila/geizhals-api-go/helpers"
+	"github.com/dschila/geizhals-api-go/models"
 	"github.com/gocolly/colly/v2"
-	"github.com/proph/geizhals-api-go/helpers"
-	"github.com/proph/geizhals-api-go/models"
 )
 
 // Collects all information about the article

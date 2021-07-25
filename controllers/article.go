@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/proph/geizhals-api-go/services"
+	"github.com/dschila/geizhals-api-go/services"
 )
 
 // Init 'article' endpoints

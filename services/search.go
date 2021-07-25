@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/dschila/geizhals-api-go/helpers"
+	"github.com/dschila/geizhals-api-go/models"
 	"github.com/gocolly/colly/v2"
-	"github.com/proph/geizhals-api-go/helpers"
-	"github.com/proph/geizhals-api-go/models"
 )
 
 // Searches for articles based on the query string and the category ID

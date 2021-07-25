@@ -1,4 +1,4 @@
-module github.com/proph/geizhals-api-go
+module github.com/dschila/geizhals-api-go
 
 go 1.16
 
