@@ -1,8 +1,6 @@
 package main
 
 import (
-	"log"
-
 	"github.com/dschila/geizhals-api-go/controllers"
 	"github.com/dschila/geizhals-api-go/helpers"
 	"github.com/gin-contrib/cors"
@@ -11,11 +9,7 @@ import (
 )
 
 func main() {
-	err := godotenv.Load(".env")
-
-	if err != nil {
-		log.Fatalf("Error loading .env file")
-	}
+	godotenv.Load(".env")
 
 	server := gin.Default()
 	server.Use(gin.Logger())
